@@ -1,0 +1,163 @@
+:root {
+  --laca-roja:#8b0000;
+  --laca-roja-osc:#6e0000;
+  --oro:#d4af37;
+  --oro-suave:#e5c96a;
+  --jade:#2e8b57;
+  --jade-claro:#3fa06a;
+  --tinta:#0f0f0f;
+  --marfil:#f8f3e7;
+  --papel:#f3ead7;
+}
+
+body {
+  font-family: "Noto Serif", "Songti SC", "STSong", "MingLiU", "Times New Roman", serif;
+  background:
+    radial-gradient(1200px 700px at 20% -10%, rgba(212,175,55,0.25), transparent 60%),
+    radial-gradient(900px 600px at 120% 110%, rgba(46,139,87,0.18), transparent 55%),
+    linear-gradient(135deg, #6a0000 0%, #8b0000 40%, #5c0000 100%);
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--tinta);
+  align-items: center; 
+}
+
+.game-container {
+  text-align: center;
+  background: white; 
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.92));
+  border-radius: 22px;
+  padding: 25px 20px 20px 20px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+  width: 350px;
+  border: 3px double var(--oro);
+  outline: solid 4px black;
+  position: relative;
+}
+
+header h1 {
+  color: var(--tinta);
+  font-size: 30px; 
+  margin-bottom: 5px;
+  letter-spacing: .5px;
+  text-shadow: 1px 1px white;
+}
+
+#turn-indicator {
+  font-weight: bold; 
+  color: var(--jade);
+  padding: 5px;
+  border: 2px solid var(--jade);
+  border-radius: 10px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: black;
+  border-radius: 20px;
+}
+
+.cell {
+  background: #faf7ef;
+  border: 2px solid gold;
+  border-radius: 15px;
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell:hover {
+  background: #f3e6c5;
+  transform: scale(1.05); 
+}
+
+.cell.x { color: red; }  
+.cell.o { color: green; } 
+
+.controls button {
+  background: red; 
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+}
+.controls button:hover {
+  background: darkred;
+}
+
+.mode-selector select {
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid green;
+}
+
+footer {
+  font-size: 12px;
+  color: gray;
+}
+
+@media (max-width: 380px){
+  .board { grid-template-columns: 80px 80px 80px; }
+  .cell { font-size: 2em; }
+}
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("https://m.media-amazon.com/images/I/61Kz0+gYjxL._SL1135_.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sakura-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+}
+
+.sakura {
+  position: absolute;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url("616444.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: caer 8s linear infinite;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

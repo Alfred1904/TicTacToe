@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Juego de Tic Tac Toe inspirado en Avatar Aang con efecto de pétalos de sakura." />
+  <title>Tic Tac Toe - Avatar Aang</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sakura-container" aria-hidden="true"></div>
+
+  <main class="game-container">
+    <header>
+      <h1>Tic Tac Toe - Avatar Aang</h1>
+      <p id="turn-indicator">Turno de: <span>X</span></p>
+    </header>
+    <section class="board" aria-label="Tablero de juego">
+      <div class="cell" data-index="0" role="button" tabindex="0" aria-label="Celda 1"></div>
+      <div class="cell" data-index="1" role="button" tabindex="0" aria-label="Celda 2"></div>
+      <div class="cell" data-index="2" role="button" tabindex="0" aria-label="Celda 3"></div>
+      <div class="cell" data-index="3" role="button" tabindex="0" aria-label="Celda 4"></div>
+      <div class="cell" data-index="4" role="button" tabindex="0" aria-label="Celda 5"></div>
+      <div class="cell" data-index="5" role="button" tabindex="0" aria-label="Celda 6"></div>
+      <div class="cell" data-index="6" role="button" tabindex="0" aria-label="Celda 7"></div>
+      <div class="cell" data-index="7" role="button" tabindex="0" aria-label="Celda 8"></div>
+      <div class="cell" data-index="8" role="button" tabindex="0" aria-label="Celda 9"></div>
+    </section>
+    <section class="controls">
+      <button id="restart" type="button">🔄 Reiniciar Partida</button>
+    </section>
+    <section class="mode-selector">
+      <label for="mode">Modo de juego:</label>
+      <select id="mode" name="mode">
+        <option value="pvp">Jugador vs Jugador</option>
+        <option value="cpu">Jugador vs Computadora</option>
+      </select>
+    </section>
+
+    <footer>
+      <p>Inspirado en Avatar: El último maestro Aire 🌊🔥🌱💨</p>
+    </footer>
+  </main>
+  <div class="petals" aria-hidden="true">
+    <div class="petal" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="petal" style="left: 30%; animation-delay: 2s;"></div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
